@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soporte</title>
+  <meta name="description" content="Centro de soporte y asistencia al cliente DonellClock.">
+  <link rel="stylesheet" href="css/soporte.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="navbar-logo">Donell<span>Clock</span></a>
+    <ul class="navbar-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="catalogo.html">Catalogo</a></li>
+      <li><a href="soporte.html" class="active">Soporte</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">&#10005;</button>
+    <a href="index.html">Inicio</a>
+    <a href="catalogo.html">Catalogo</a>
+    <a href="soporte.html">Soporte</a>
+  </div>
+
+  <div class="soporte-wrapper">
+
+    <!-- SIDEBAR -->
+    <aside class="soporte-sidebar">
+      <div class="sidebar-brand">
+        <div class="sidebar-icon">&#9651;</div>
+        <div class="sidebar-title">DonellClock</div>
+        <div class="sidebar-sub">Asistencia al Cliente</div>
+      </div>
+
+      <div class="sidebar-section">
+        <h4>Temas Frecuentes</h4>
+        <div class="quick-topics">
+          <button class="topic-btn" data-topic="Horarios de atencion">
+            <span class="topic-icon">&#9670;</span> Horarios de Atencion
+          </button>
+          <button class="topic-btn" data-topic="Servicios de reparacion">
+            <span class="topic-icon">&#9670;</span> Servicios de Reparacion
+          </button>
+          <button class="topic-btn" data-topic="Informacion de envios">
+            <span class="topic-icon">&#9670;</span> Informacion de Envios
+          </button>
+          <button class="topic-btn" data-topic="Productos disponibles">
+            <span class="topic-icon">&#9670;</span> Productos Disponibles
+          </button>
+          <button class="topic-btn" data-topic="Marcas que trabajan">
+            <span class="topic-icon">&#9670;</span> Marcas con las que Trabajamos
+          </button>
+          <button class="topic-btn" data-topic="Quienes son los fundadores">
+            <span class="topic-icon">&#9670;</span> Historia de la Empresa
+          </button>
+        </div>
+      </div>
+
+      <div class="sidebar-contact">
+        <h4>Informacion de Contacto</h4>
+        <div class="contact-item">
+          <span class="contact-item-icon">&#9632;</span>
+          <div class="contact-item-text">
+            <strong>Ubicacion</strong>
+            Cordoba, Argentina
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-item-icon">&#9632;</span>
+          <div class="contact-item-text">
+            <strong>Horario</strong>
+            Lun-Vie 9:00 a 18:30<br>Sab 9:00 a 13:00
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-item-icon">&#9632;</span>
+          <div class="contact-item-text">
+            <strong>Envios</strong>
+            SendBox &amp; OCA<br>5 provincias
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- CHAT -->
+    <div class="soporte-chat">
+      <div class="chat-header">
+        <div class="chat-status">
+          <div class="status-dot"></div>
+          <div class="chat-header-text">
+            <h3>Asistente DonellClock</h3>
+            <p>En linea &mdash; Respuesta inmediata</p>
+          </div>
+        </div>
+        <button class="chat-clear-btn" id="clearChat">Limpiar Chat</button>
+      </div>
+
+      <div class="chat-messages" id="chatMessages">
+        <!-- Messages injected by JS -->
+      </div>
+
+      <div class="chat-input-area">
+        <div class="chat-suggestions" id="chatSuggestions">
+          <!-- Chips injected by JS -->
+        </div>
+        <div class="input-row">
+          <textarea
+            class="chat-textarea"
+            id="chatInput"
+            placeholder="Escriba su consulta aqui..."
+            rows="1"
+          ></textarea>
+          <button class="send-btn" id="sendBtn" aria-label="Enviar">
+            &#9654;
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      <span class="footer-logo">Donell<span>Clock</span></span>
+      <span class="footer-copyright">&copy; 2026 DonellClock. Todos los derechos reservados.</span>
+    </div>
+  </footer>
+
+  <script src="js/soporte.js"></script>
+</body>
+</html>

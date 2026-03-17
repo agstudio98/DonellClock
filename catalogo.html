@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogo</title>
+  <meta name="description" content="Catalogo completo de relojes, accesorios y electronica DonellClock.">
+  <link rel="stylesheet" href="css/catalogo.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="navbar-logo">Donell<span>Clock</span></a>
+    <ul class="navbar-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="catalogo.html" class="active">Catalogo</a></li>
+      <li><a href="soporte.html">Soporte</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">&#10005;</button>
+    <a href="index.html">Inicio</a>
+    <a href="catalogo.html">Catalogo</a>
+    <a href="soporte.html">Soporte</a>
+  </div>
+
+  <header class="catalog-header">
+    <div class="catalog-header-inner">
+      <span class="section-label">DonellClock</span>
+      <h1>Catalogo de Productos</h1>
+      <p>Relojeria de alta gama, accesorios, electronica y repuestos seleccionados con criterio de precision.</p>
+    </div>
+  </header>
+
+  <div class="filtros-section">
+    <div class="filtros-inner">
+      <div class="search-bar">
+        <span class="search-icon">&#9654;</span>
+        <input type="text" id="searchInput" placeholder="Buscar productos...">
+      </div>
+      <div class="filter-chips">
+        <button class="chip active" data-filter="todos">Todos</button>
+        <button class="chip" data-filter="antiguos">Relojes Antiguos</button>
+        <button class="chip" data-filter="digitales">Relojes Digitales</button>
+        <button class="chip" data-filter="electronicos">Electronica</button>
+        <button class="chip" data-filter="accesorios">Accesorios</button>
+        <button class="chip" data-filter="repuestos">Repuestos</button>
+      </div>
+      <select class="sort-select" id="sortSelect">
+        <option value="default">Ordenar por</option>
+        <option value="name-asc">Nombre A-Z</option>
+        <option value="name-desc">Nombre Z-A</option>
+        <option value="price-asc">Menor precio</option>
+        <option value="price-desc">Mayor precio</option>
+      </select>
+    </div>
+  </div>
+
+  <section class="catalog-section">
+    <p class="results-info" id="resultsInfo">Cargando productos...</p>
+    <div class="products-grid" id="productsGrid"></div>
+    <div class="empty-state" id="emptyState">
+      <h3>Sin resultados</h3>
+      <p>No se encontraron productos para su busqueda.</p>
+    </div>
+  </section>
+
+  <div class="modal-overlay" id="productModal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()">&#10005;</button>
+      <div class="modal-img">
+        <img id="modalImg" src="" alt="">
+      </div>
+      <div class="modal-content">
+        <span class="modal-category" id="modalCategory"></span>
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <div class="modal-ornament"></div>
+        <p class="modal-desc" id="modalDesc"></p>
+        <div class="modal-specs" id="modalSpecs"></div>
+        <div class="modal-price-row">
+          <span class="modal-price" id="modalPrice"></span>
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-filled" onclick="requestProduct()"><span>Solicitar Compra</span></button>
+          <button class="btn" onclick="closeModal()"><span>Cerrar</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      <span class="footer-logo">Donell<span>Clock</span></span>
+      <span class="footer-copyright">&copy; 2026 DonellClock. Todos los derechos reservados.</span>
+    </div>
+  </footer>
+
+  <script src="js/catalogo.js"></script>
+</body>
+</html>
